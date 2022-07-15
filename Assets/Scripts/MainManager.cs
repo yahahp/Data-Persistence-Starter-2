@@ -30,7 +30,6 @@ public class MainManager : MonoBehaviour
     private void Awake()
     {
         enteredName = MenuManager.Instance.savedName;
-
     }
     void Start()
     {
@@ -55,12 +54,10 @@ public class MainManager : MonoBehaviour
     private void Update()
     {
         ScoreText.text = $"Score : {enteredName} :  {m_Points}";
-        
 
         if (!m_Started)
         {
-            
-            
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 m_Started = true;
@@ -74,14 +71,12 @@ public class MainManager : MonoBehaviour
         }
         else if (m_GameOver)
         {
-            
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                
+
             }
         }
-
     }
 
     void AddPoint(int point)
@@ -105,13 +100,7 @@ public class MainManager : MonoBehaviour
         }
 
     }
-    public void ScoreUpperText()
-    {
-        
-       
-        
-    }
-
+    
     [System.Serializable]
     public class SaveData
     {
